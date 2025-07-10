@@ -1,92 +1,77 @@
-const eventsData = {
-  "brain-bytes": {
-    title: "Brain Bytes",
-    description: "A fast-paced tech quiz that challenges your logical thinking and technical knowledge.",
-    images: [
-      "https://via.placeholder.com/700x250",
-      "https://via.placeholder.com/700x250"
-    ]
+AOS.init({ duration: 600, once: true });
+
+const data = {
+  spurthi24: {
+    title:"Spurthi 2K24",
+    desc:"A memorable tech fiesta featuring code jams, quizzes, robotics and more.",
+    imgs:["assets/images/sp241.png","assets/images/sp242.png","assets/images/sp243.png"]
   },
-  "tech-tornado": {
-    title: "Tech Tornado",
-    description: "A technical showdown of code, creativity, and innovation.",
-    images: [
-      "https://via.placeholder.com/700x250",
-      "https://via.placeholder.com/700x250"
-    ]
+  spurthi25: {
+    title:"Spurthi 2K25",
+    desc:"The next-gen Spurthi 2K25 – coming with more events, more innovation.",
+    imgs:["assets/images/s21.png","assets/images/s22.png","assets/images/s23.png"]
   },
-  "ideathon": {
-    title: "Ideathon",
-    description: "Pitch your best ideas in tech-driven innovation for real-world problems.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  prajwalan: {
+    title:"Prajwalan Cultural Fest",
+    desc:"Dance, music, art and culture – ACE’s festive spotlight.",
+    imgs:["assets/images/p22.png","assets/images/p24.png"]
   },
-  "prajwalan": {
-    title: "Prajwalan",
-    description: "Cultural spark of ACE — music, drama, dance, and celebration of creativity.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  newbies23: {
+    title:"Newbies 2023",
+    desc:"Welcoming our 2023 batch with fun games & bonding.",
+    imgs:["assets/images/new23.png"]
   },
-  "newbies": {
-    title: "Newbies",
-    description: "Freshers welcome with fun games, team activities and a warm ACE family intro.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  newbies24: {
+    title:"Newbies 2024",
+    desc:"Freshers 2024 unite! Orientation, laughter & memories.",
+    imgs:["assets/images/n2.png"]
   },
-  "figma": {
-    title: "Figma Workshop",
-    description: "Hands-on session on modern UI/UX design using Figma.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  beatscodes: {
+    title:"Beats & Codes",
+    desc:"Code to the rhythm – musical coding hackathon.",
+    imgs:["assets/images/bnc.png"]
   },
-  "beats-codes": {
-    title: "Beats and Codes",
-    description: "Fun-filled coding games combined with music and team spirit.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  skillup: {
+    title:"Skill Up Sessions",
+    desc:"Hands-on workshops to build your dev toolkit.",
+    imgs:["assets/images/ski.png","assets/images/ski2.png"]
   },
-  "skill-up": {
-    title: "Skill Up",
-    description: "Upskilling series: From development to deployment and everything in between.",
-    images: [
-      "https://via.placeholder.com/700x250"
-    ]
+  figma: {
+    title:"Figma UI/UX Workshop",
+    desc:"Learn real-world prototyping & UX design with Figma.",
+    imgs:["assets/images/fig.png","assets/images/fig2.png"]
+  },
+  ml_expert: {
+    title:"ML Expert Talk",
+    desc:"Industry-led insights into Machine Learning innovations.",
+    imgs:["assets/images/mlex.png"]
+  },
+  ai_session: {
+    title:"AI Session",
+    desc:"AI breakthroughs & their real-world applications.",
+    imgs:["assets/images/ai.png"]
   }
 };
 
-function openEvent(eventKey) {
-  const modal = document.getElementById("event-modal");
-  const container = document.getElementById("event-details");
-  const event = eventsData[eventKey];
+function openEvent(key) {
+  const mod = document.getElementById("modal");
+  const container = document.getElementById("modal-details");
+  if (!data[key]) return;
 
-  if (!event) return;
-
+  const { title, desc, imgs } = data[key];
   container.innerHTML = `
-    <h2>${event.title}</h2>
-    <p>${event.description}</p>
-    <div class="swiper">
+    <h2>${title}</h2><p>${desc}</p>
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        ${event.images.map(url => `<div class="swiper-slide"><img src="${url}" /></div>`).join('')}
+        ${imgs.map(u=>`<div class="swiper-slide"><img src="${u}" alt="${title}"/></div>`).join('')}
       </div>
       <div class="swiper-pagination"></div>
     </div>
   `;
-
-  modal.style.display = "flex";
-
-  new Swiper(".swiper", {
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+  mod.style.display="flex";
+  new Swiper(".mySwiper",{ loop:true,pagination:{el:'.swiper-pagination'}});
 }
 
 function closeModal() {
-  document.getElementById("event-modal").style.display = "none";
+  document.getElementById("modal").style.display="none";
 }
