@@ -2,109 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ACE - SRKR Engineering College</title>
-
-  <!-- Correct style link -->
   <link rel="stylesheet" href="Style/style.css" />
-
-  <!-- Fonts and Libraries -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <img src="assets/images/ace.jpg" alt="ACE Logo" class="logo" />
-    <h1>Association of Computer Engineers</h1>
-    <p>SRKR Engineering College</p>
-  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="assets/images/ace.jpg" class="hero-logo" alt="ACE Logo" />
+    <h1 class="hero-title">Association of Computer Engineers</h1>
+    <h3 class="hero-subtitle">SRKR Engineering College - Department of CSE</h3>
+    <p class="typewriter">Empowering Innovation through Technology and Teamwork</p>
+  </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" data-aos="fade-up">
     <h2>About ACE</h2>
     <p>
-      ACE is the student association for the Department of Computer Science and Engineering at SRKR. We foster innovation, conduct events, workshops, and create opportunities for students to showcase their skills in technology and creativity.
+      ACE (Association of Computer Engineers) is the official student body of the CSE Department at SRKR Engineering College.
+      We organize events, workshops, and hackathons that bridge academic learning with real-world tech exposure.
+      Our goal is to build leaders, innovators, and collaborators.
     </p>
   </section>
 
-  <!-- Event Sections -->
-  <div class="events-container">
-    <!-- ONE BLOCK FOR EACH EVENT -->
-    <section class="events" data-aos="fade-up">
-      <h2>Spurthi 2K24</h2>
-      <div class="grid">
-        <div class="card" onclick="openEvent('spurthi24')">
-          <img src="assets/images/sp241.png" alt="Spurthi 2K24">
-          <h3>Spurthi 2K24</h3>
-        </div>
-        <div class="card" onclick="openEvent('spurthi25')">
-          <img src="assets/images/s21.png" alt="Spurthi 2K25">
-          <h3>Spurthi 2K25</h3>
-        </div>
+  <!-- Event Category Sections -->
+  <section class="category" data-aos="fade-up">
+    <h2>🔰 For Freshers</h2>
+    <div class="grid">
+      <div class="card" onclick="openEvent('newbies23')">
+        <img src="assets/images/new23.png" />
+        <h3>Newbies 2023</h3>
       </div>
-    </section>
-
-    <section class="events" data-aos="fade-up">
-      <h2>Prajwalan</h2>
-      <div class="grid">
-        <div class="card" onclick="openEvent('prajwalan')">
-          <img src="assets/images/p24.png" alt="Prajwalan">
-          <h3>Prajwalan</h3>
-        </div>
+      <div class="card" onclick="openEvent('newbies24')">
+        <img src="assets/images/n2.png" />
+        <h3>Newbies 2024</h3>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="events" data-aos="fade-up">
-      <h2>Newbies Orientation</h2>
-      <div class="grid">
-        <div class="card" onclick="openEvent('newbies23')">
-          <img src="assets/images/new23.png" alt="Newbies 2023">
-          <h3>Newbies 2023</h3>
-        </div>
-        <div class="card" onclick="openEvent('newbies24')">
-          <img src="assets/images/n2.png" alt="Newbies 2024">
-          <h3>Newbies 2024</h3>
-        </div>
+  <section class="category" data-aos="fade-up">
+    <h2>🧠 Tech Events</h2>
+    <div class="grid">
+      <div class="card" onclick="openEvent('figma')">
+        <img src="assets/images/fig.png" />
+        <h3>Figma Workshop</h3>
       </div>
-    </section>
-
-    <section class="events" data-aos="fade-up">
-      <h2>Workshops</h2>
-      <div class="grid">
-        <div class="card" onclick="openEvent('figma')">
-          <img src="assets/images/fig.png" alt="Figma">
-          <h3>Figma Workshop</h3>
-        </div>
-        <div class="card" onclick="openEvent('beats')">
-          <img src="assets/images/bnc.png" alt="Beats and Code">
-          <h3>Beats & Code</h3>
-        </div>
-        <div class="card" onclick="openEvent('skillup')">
-          <img src="assets/images/ski.png" alt="Skill Up">
-          <h3>Skill Up</h3>
-        </div>
+      <div class="card" onclick="openEvent('ml')">
+        <img src="assets/images/mlex.png" />
+        <h3>ML Talk</h3>
       </div>
-    </section>
-
-    <section class="events" data-aos="fade-up">
-      <h2>Expert Talks</h2>
-      <div class="grid">
-        <div class="card" onclick="openEvent('ml')">
-          <img src="assets/images/mlex.png" alt="ML Talk">
-          <h3>ML Talk</h3>
-        </div>
-        <div class="card" onclick="openEvent('ai')">
-          <img src="assets/images/ai.png" alt="AI Talk">
-          <h3>AI Talk</h3>
-        </div>
+      <div class="card" onclick="openEvent('ai')">
+        <img src="assets/images/ai.png" />
+        <h3>AI Innovation</h3>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
-  <!-- Modal for event preview -->
+  <section class="category" data-aos="fade-up">
+    <h2>🚀 Hackathons & Fests</h2>
+    <div class="grid">
+      <div class="card" onclick="openEvent('prajwalan')">
+        <img src="assets/images/p24.png" />
+        <h3>Prajwalan</h3>
+      </div>
+      <div class="card" onclick="openEvent('spurthi24')">
+        <img src="assets/images/s241.png" />
+        <h3>Spurthi 2K24</h3>
+      </div>
+      <div class="card" onclick="openEvent('spurthi25')">
+        <img src="assets/images/s21.png" />
+        <h3>Spurthi 2K25</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" data-aos="fade-up">
+    <h2>💼 Professional Development</h2>
+    <div class="grid">
+      <div class="card" onclick="openEvent('ace')">
+        <img src="assets/images/ace.jpg" />
+        <h3>ACE Event</h3>
+      </div>
+      <div class="card" onclick="openEvent('beats')">
+        <img src="assets/images/bnc.png" />
+        <h3>Beats & Code</h3>
+      </div>
+      <div class="card" onclick="openEvent('skillup')">
+        <img src="assets/images/ski.png" />
+        <h3>Skill Up</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -114,7 +108,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 ACE | SRKR Engineering College</p>
+    <p>© 2025 ACE | SRKR Engineering College | Dept. of CSE</p>
   </footer>
 
   <!-- Scripts -->
@@ -122,7 +116,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="app.js"></script>
   <script>
-    AOS.init({ duration: 700, once: true });
+    AOS.init({ duration: 800, once: true });
   </script>
 </body>
 </html>
