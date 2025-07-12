@@ -1,204 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" class="no-js">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACE Activities</title>
-  <link rel="stylesheet" href="style/style.css" />
-  <link rel="icon" href="assets/images/acelog.jpg" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Same head as index.html -->
+    <title>ACE | Discover</title>
 </head>
 <body>
+    <!-- Same preloader and cursor as index.html -->
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <img src="assets/images/acelog.jpg" alt="ACE Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="activities.html" class="active">Activities</a></li>
-        <li><a href="about.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Navigation (Same as index.html) -->
+    <header class="blend-header">
+        <!-- Copy header from index.html -->
+    </header>
 
-  <section class="activities-header">
-    <h1 data-aos="fade-up">Explore Our Events</h1>
-    <p data-aos="fade-up" data-aos-delay="200">A glimpse into the core modules and milestones of ACE</p>
-  </section>
+    <main class="discover-page">
+        <!-- Hero Section -->
+        <section class="discover-hero fullscreen-section">
+            <div class="discover-hero-content">
+                <h1 class="discover-title" data-split-text>
+                    <span class="line"><span class="word">Discover</span></span>
+                    <span class="line"><span class="word">Our</span></span>
+                    <span class="line"><span class="word">World</span></span>
+                </h1>
+            </div>
+            <div class="discover-hero-bg" data-parallax data-speed="0.3"></div>
+        </section>
 
-  <!-- Events Grid -->
-  <section class="activities-grid">
-    
-    <!-- Freshers -->
-    <div class="activity-row" data-aos="fade-right">
-      <div class="activity-card">
-        <img src="assets/images/n2.png" alt="Newbies 2024" />
-        <h3>Newbies 2024</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>A grand welcome to the new batch with ice-breaking sessions, bonding, and fun learning moments.</p>
-        </details>
-      </div>
-      <div class="activity-card">
-        <img src="assets/images/new23.png" alt="Newbies 2023" />
-        <h3>Newbies 2023</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Engaging activities and introductions for the 2023 batch. A warm cultural and technical kickoff.</p>
-        </details>
-      </div>
-    </div>
+        <!-- Grid Gallery -->
+        <section class="discover-grid">
+            <div class="grid-sizer"></div>
+            
+            <!-- Item 1 -->
+            <div class="grid-item" data-category="design" data-animate>
+                <div class="grid-item-inner">
+                    <div class="grid-image">
+                        <img src="assets/images/discover-1.jpg" alt="Discovery 1">
+                    </div>
+                    <div class="grid-info">
+                        <h3>Visual Identity</h3>
+                        <p>Branding Design</p>
+                        <span class="grid-year">2023</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="grid-item" data-category="motion" data-animate>
+                <!-- Same structure as above -->
+            </div>
+            
+            <!-- 10+ more grid items -->
+        </section>
 
-    <!-- Hackathons -->
-    <div class="activity-row" data-aos="fade-left">
-      <div class="activity-card">
-        <img src="assets/images/p24.png" alt="Prajwalam" />
-        <h3>Prajwalam Hackathon</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>A college-wide innovation sprint — code, build, pitch! Projects solving real-world problems.</p>
-        </details>
-      </div>
-      <div class="activity-card">
-        <img src="assets/images/s248.png" alt="Spurthi 2K24" />
-        <h3>Spurthi 2K24</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Massive tech fest with UI challenges, AI pitches, quizzes, and open hardware showcases.</p>
-        </details>
-      </div>
-    </div>
+        <!-- Pagination -->
+        <div class="discover-pagination">
+            <a href="#" class="pagination-prev" data-cursor-hover>
+                <span>Previous</span>
+            </a>
+            <div class="pagination-numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+            </div>
+            <a href="#" class="pagination-next" data-cursor-hover>
+                <span>Next</span>
+            </a>
+        </div>
+    </main>
 
-    <!-- Workshops -->
-    <div class="activity-row" data-aos="fade-right">
-      <div class="activity-card">
-        <img src="assets/images/fig2.png" alt="Figma Workshop" />
-        <h3>Figma UI Workshop</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Designing from zero to UI prototypes. A hands-on Figma workshop for building real apps.</p>
-        </details>
-      </div>
-      <div class="activity-card">
-        <img src="assets/images/mlex.png" alt="ML Talk" />
-        <h3>ML Guest Session</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Understanding Machine Learning concepts and industry use cases through expert-led sessions.</p>
-        </details>
-      </div>
-    </div>
+    <!-- Same footer as index.html -->
 
-    <!-- Professional -->
-    <div class="activity-row" data-aos="fade-left">
-      <div class="activity-card">
-        <img src="assets/images/ace.jpg" alt="ACE Event" />
-        <h3>ACE Event</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Git, CV prep, LinkedIn, and interview guidance by alumni — for career growth and placement prep.</p>
-        </details>
-      </div>
-      <div class="activity-card">
-        <img src="assets/images/ski.png" alt="Skill Up" />
-        <h3>Skill Up</h3>
-        <details>
-          <summary>View Details</summary>
-          <p>Improving communication, teamwork, public speaking, and personal branding — powered by ACE.</p>
-        </details>
-      </div>
-    </div>
+    <!-- Additional JS for filtering -->
+    <script>
+        // Isotope filtering
+        const grid = document.querySelector('.discover-grid');
+        const iso = new Isotope(grid, {
+            itemSelector: '.grid-item',
+            masonry: {
+                columnWidth: '.grid-sizer',
+                gutter: 30
+            }
+        });
 
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 ACE - SRKR CSE | Built with creativity and collaboration</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About ACE</title>
-  <link rel="stylesheet" href="style/style.css" />
-  <link rel="icon" href="assets/images/acelog.jpg" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-<body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <img src="assets/images/acelog.jpg" alt="ACE Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="about.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero alt-hero" style="background-image: url('assets/images/people-talking.jpg');">
-    <div class="hero-overlay">
-      <h1 data-aos="fade-up">Contact & Connect</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Your gateway to ACE and SRKR CSE</p>
-    </div>
-  </section>
-
-  <!-- ACE Links -->
-  <section class="links-section" data-aos="fade-up">
-    <h2>Know More</h2>
-    <div class="link-cards">
-      <a href="https://srkrec.edu.in/cse_activities.php" target="_blank" class="link-card">
-        <h3>Know about SRKR</h3>
-        <p>Visit the official SRKR Engineering College activities page.</p>
-      </a>
-      <a href="https://www.srkrcse.com/" target="_blank" class="link-card">
-        <h3>Know about SRKR CSE</h3>
-        <p>Explore the department and its offerings in full detail.</p>
-      </a>
-      <a href="https://srkrace.wordpress.com/about/" target="_blank" class="link-card">
-        <h3>Know about SRKR ACE</h3>
-        <p>Our legacy and history in one place — the ACE blog.</p>
-      </a>
-      <a href="https://www.instagram.com/srkr_ace/" target="_blank" class="link-card">
-        <h3>ACE Instagram</h3>
-        <p>Stay updated with event reels, photos & highlights.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact Info -->
-  <section class="contact-section" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> srkrec@gmail.com</p>
-    <p><strong>Phone:</strong> +91 98765 43210</p>
-    <p><strong>Address:</strong> Department of CSE, SRKR Engineering College, Bhimavaram, AP</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 ACE - SRKR CSE | Reach out. Collaborate. Create.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="script/app.js"></script>
-</body>
-</html>
-
+        // Filter buttons would be added here
+    </script>
 </body>
 </html>
