@@ -1,56 +1,63 @@
+// Event Data with Matter & Images
 const eventData = {
-  spurthi24: {
-    title: "Spurthi 2K24",
-    desc: "A grand technical fest conducted by ACE, filled with innovative competitions, coding battles, and tech-based activities.",
-    images: ["s241.png", "s242.png", "s243.png", "s244.png", "s245.png", "s246.png", "s247.png", "s248.png"]
-  },
-  spurthi25: {
-    title: "Spurthi 2K25",
-    desc: "Upcoming edition of Spurthi, aiming to be bigger and more impactful, involving both tech and non-tech fun events.",
-    images: ["s21.png", "s22.png", "s23.png", "s24.png", "s25.png", "s26.png", "s27.png", "s28.png"]
-  },
-  prajwalan: {
-    title: "Prajwalan",
-    desc: "Prajwalan is ACE's flagship cultural event filled with dance, drama, music and creative performances by CSE students.",
-    images: ["p24.png"]
-  },
   newbies23: {
     title: "Newbies 2023",
-    desc: "Orientation for freshers of 2023 batch to welcome them into the ACE family with fun, games, and mentoring.",
+    desc: "An orientation event for the 2023 CSE batch. It featured fun activities, team building, and an introduction to the ACE community. Senior students shared tips, resources, and how to thrive in SRKR life.",
     images: ["new23.png"]
   },
   newbies24: {
     title: "Newbies 2024",
-    desc: "Welcoming the 2024 freshers with a blend of cultural events, tech showcases and team-building activities.",
+    desc: "A fresh welcome to the 2024 batch filled with ice-breaking games, fun showcases, cultural events, and peer mentoring sessions. The event was designed to make newcomers feel at home.",
     images: ["n2.png"]
   },
   figma: {
     title: "Figma Workshop",
-    desc: "A UI/UX hands-on workshop on design thinking and using Figma to prototype real-world application interfaces.",
+    desc: "A hands-on session on UI/UX design where students learned Figma tool from scratch. The workshop helped participants build wireframes and interactive mockups for real applications.",
     images: ["fig.png", "fig2.png"]
+  },
+  ml: {
+    title: "Machine Learning Talk",
+    desc: "An expert-led seminar that introduced students to core ML concepts, data patterns, and real-time applications like image classification and recommendation systems.",
+    images: ["mlex.png"]
+  },
+  ai: {
+    title: "AI Innovation",
+    desc: "A spotlight event focused on AI's role in modern tech. Included talks on generative AI, ethical AI, and innovation stories from startups, curated by ACE alumni.",
+    images: ["ai.png"]
+  },
+  prajwalan: {
+    title: "Prajwalan",
+    desc: "ACE's signature technical and cultural hackathon. Students from various colleges showcased their talent in innovation, tech building, and cultural performance segments.",
+    images: ["p24.png"]
+  },
+  spurthi24: {
+    title: "Spurthi 2K24",
+    desc: "A mega intercollegiate tech fest organized by ACE with coding challenges, hardware demos, UI design sprints, and quiz marathons. Participation crossed 800 students.",
+    images: ["s241.png", "s242.png", "s243.png", "s244.png", "s245.png", "s246.png", "s247.png", "s248.png"]
+  },
+  spurthi25: {
+    title: "Spurthi 2K25",
+    desc: "The 2025 edition focused on futuristic tech like IoT, Blockchain and AI in health. Included panel talks, idea expo, and a developer showcase for project builders.",
+    images: ["s21.png", "s22.png", "s23.png", "s24.png", "s25.png", "s26.png", "s27.png", "s28.png"]
+  },
+  ace: {
+    title: "ACE Event",
+    desc: "A professional event curated to build leadership and career-focused skills. Sessions included GitHub for devs, resume reviews, and mock interviews by alumni.",
+    images: ["ace.jpg"]
   },
   beats: {
     title: "Beats and Code",
-    desc: "An event that merges music and coding, exploring rhythm and logic through interactive activities.",
+    desc: "An ACE-exclusive session that combined creative coding with music logic. It helped students understand patterns, loops, and structure with rhythm-based fun.",
     images: ["bnc.png"]
   },
   skillup: {
     title: "Skill Up",
-    desc: "Skill enhancement series by ACE covering GitHub, public speaking, resume building, and teamwork skills.",
+    desc: "A recurring series hosted by ACE to improve communication, CV building, public speaking, and teamwork. Ideal for students prepping for placements and leadership roles.",
     images: ["ski.png", "ski2.png"]
-  },
-  ml: {
-    title: "Machine Learning Talk",
-    desc: "An expert session on Machine Learning concepts and real-world applications, held in the ACE hall.",
-    images: ["mlex.png"]
-  },
-  ai: {
-    title: "AI & Innovation",
-    desc: "A special talk by alumni and professionals on how AI is transforming the world and how students can be part of it.",
-    images: ["ai.png"]
   }
 };
 
+// Open Modal with Content
 function openEvent(eventKey) {
   const modal = document.getElementById("modal");
   const modalDetails = document.getElementById("modal-details");
@@ -65,7 +72,8 @@ function openEvent(eventKey) {
         ${images.map(img => `
           <div class="swiper-slide">
             <img src="assets/images/${img}" alt="${title}" />
-          </div>`).join("")}
+          </div>
+        `).join("")}
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
@@ -91,6 +99,7 @@ function openEvent(eventKey) {
   });
 }
 
+// Close Modal
 function closeModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "none";
