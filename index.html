@@ -2,121 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ACE - SRKR Engineering College</title>
-  <link rel="stylesheet" href="Style/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACE - Home</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="icon" href="assets/images/acelog.jpg" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 <body>
-  <!-- Hero -->
-  <section class="hero">
-    <img src="assets/images/ace.jpg" class="hero-logo" alt="ACE Logo" />
-    <h1 class="hero-title">Association of Computer Engineers</h1>
-    <h3 class="hero-subtitle">SRKR Engineering College - Department of CSE</h3>
-    <p class="typewriter">Empowering Innovation through Technology and Teamwork</p>
-  </section>
 
-  <!-- About -->
-  <section class="about" data-aos="fade-up">
-    <h2>About ACE</h2>
-    <p>
-      ACE (Association of Computer Engineers) is the official student body of the CSE Department at SRKR Engineering College.
-      We organize events, workshops, and hackathons that bridge academic learning with real-world tech exposure.
-      Our goal is to build leaders, innovators, and collaborators.
-    </p>
-  </section>
+  <!-- Navbar -->
+  <header class="navbar">
+    <img src="assets/images/acelog.jpg" alt="ACE Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="about.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Event Category Sections -->
-  <section class="category" data-aos="fade-up">
-    <h2>🔰 For Freshers</h2>
-    <div class="grid">
-      <div class="card" onclick="openEvent('newbies23')">
-        <img src="assets/images/new23.png" />
-        <h3>Newbies 2023</h3>
-      </div>
-      <div class="card" onclick="openEvent('newbies24')">
-        <img src="assets/images/n2.png" />
-        <h3>Newbies 2024</h3>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/images/back.jpg');">
+    <div class="hero-overlay">
+      <h1 data-aos="fade-up">ACE — Association of Computer Engineers</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Fueling Innovation, Passion, and Tech Leadership @ SRKR CSE</p>
+      <a href="activities.html" class="cta-button" data-aos="fade-up" data-aos-delay="400">Explore Events</a>
     </div>
   </section>
 
-  <section class="category" data-aos="fade-up">
-    <h2>🧠 Tech Events</h2>
-    <div class="grid">
-      <div class="card" onclick="openEvent('figma')">
-        <img src="assets/images/fig.png" />
-        <h3>Figma Workshop</h3>
-      </div>
-      <div class="card" onclick="openEvent('ml')">
-        <img src="assets/images/mlex.png" />
-        <h3>ML Talk</h3>
-      </div>
-      <div class="card" onclick="openEvent('ai')">
-        <img src="assets/images/ai.png" />
-        <h3>AI Innovation</h3>
-      </div>
-    </div>
+  <!-- Introduction -->
+  <section class="intro" data-aos="fade-right">
+    <h2>Why ACE?</h2>
+    <p>ACE at SRKR Engineering College (CSE Department) is a vibrant student organization that nurtures coding, creativity, collaboration, and career growth through exciting events and opportunities for everyone — from first-year freshers to final-year innovators.</p>
   </section>
 
-  <section class="category" data-aos="fade-up">
-    <h2>🚀 Hackathons & Fests</h2>
-    <div class="grid">
-      <div class="card" onclick="openEvent('prajwalan')">
-        <img src="assets/images/p24.png" />
-        <h3>Prajwalan</h3>
+  <!-- Featured Events -->
+  <section class="featured">
+    <h2 data-aos="fade-left">Featured Modules</h2>
+    <div class="cards-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="assets/images/n2.png" alt="Freshers" />
+        <h3>Newbies Welcome</h3>
+        <p>Welcoming the future of CSE — ice-breaking events, games, and bonding.</p>
       </div>
-      <div class="card" onclick="openEvent('spurthi24')">
-        <img src="assets/images/s241.png" />
-        <h3>Spurthi 2K24</h3>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="assets/images/s248.png" alt="Spurthi" />
+        <h3>Spurthi Tech Fest</h3>
+        <p>Annual flagship fest with 800+ participants, UI design, coding, IoT, and fun.</p>
       </div>
-      <div class="card" onclick="openEvent('spurthi25')">
-        <img src="assets/images/s21.png" />
-        <h3>Spurthi 2K25</h3>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="assets/images/fig.png" alt="UI Workshop" />
+        <h3>Figma Design</h3>
+        <p>UI/UX workshops for building modern interfaces using Figma from scratch.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="category" data-aos="fade-up">
-    <h2>💼 Professional Development</h2>
-    <div class="grid">
-      <div class="card" onclick="openEvent('ace')">
-        <img src="assets/images/ace.jpg" />
-        <h3>ACE Event</h3>
-      </div>
-      <div class="card" onclick="openEvent('beats')">
-        <img src="assets/images/bnc.png" />
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="assets/images/bnc.png" alt="Beats and Code" />
         <h3>Beats & Code</h3>
-      </div>
-      <div class="card" onclick="openEvent('skillup')">
-        <img src="assets/images/ski.png" />
-        <h3>Skill Up</h3>
+        <p>Blending logic and creativity — coding with rhythm and visual effects.</p>
       </div>
     </div>
   </section>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-details"></div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 ACE | SRKR Engineering College | Dept. of CSE</p>
+    <p>&copy; 2025 ACE - SRKR CSE | Designed with ❤️</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init();
   </script>
 </body>
 </html>
